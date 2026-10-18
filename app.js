@@ -13,6 +13,8 @@ WORDS.forEach(function (w) { WORD_BY_ID[w.id] = w; });
 var KEY = "wordking.v1";
 var S = { zh:false, auto:true, timer:true, slow:false, voice:"", n:10, prog:{} };
 try { Object.assign(S, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
+/* 旧版本/异常数据可能把 prog 存坏（null 等），会导致 mark() 抛错、答题后永远无法进下一题 */
+if (!S.prog || typeof S.prog !== "object") S.prog = {};
 function save() {
   try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
 }
@@ -410,7 +412,9 @@ $("#goExam").addEventListener("click", function () { renderExamConfig(); show("e
 });
 
 function mark(en, good) {
+  if (!S.prog || typeof S.prog !== "object") S.prog = {};
   var p = S.prog[en] || (S.prog[en] = { ok: 0, no: 0 });
+  if (!p || typeof p !== "object") p = S.prog[en] = { ok: 0, no: 0 };
   if (good) p.ok++; else p.no++;
   save();
 }
@@ -510,7 +514,7 @@ var LIMIT = 60;      // countdown seconds
 
 function start(mode) {
   if (mode === "flash") return startFlash();
-  var pool = WORD_POOL.slice();
+  var pool = shuffle(WORD_POOL.slice());   // 每轮随机出题
   // 章节池太小(eg 数字 3 词 / 餐具 4 词) → 从全词表 WORDS 借词凑齐 ≥4 个不同干扰项,避免选项重复
   while (pool.length < 4 && WORDS.length > 0) {
     var extras = WORDS.filter(function (x) { return !pool.some(function (p) { return p.en === x.en; }); });
@@ -531,6 +535,8 @@ function nextQ() {
   if (Q.i >= ROUND) return finish();
   cancelAutoSpeak();
   clearTimeout(Q.autoT);
+  /* 读音严格对应当前题目：进新题前停掉上一题残留的发音 */
+  if (clip) { try { clip.pause(); } catch (e) {} }
   var pool = Q.pool;
   var w = pool[Q.i % pool.length];
   // 干扰项优先同主题，更有区分度
