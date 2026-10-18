@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FF8A3D">
+<title>2026 单词王 · 大班级</title>
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ 首页 ============ -->
+  <section class="screen is-active" id="scr-home">
+    <div class="home-head">
+      <div class="badge">2026 英语月活动</div>
+      <h1>单词王<span class="big">大班级</span></h1>
+      <p class="sub" id="homeSub"></p>
+    </div>
+
+    <div class="top-modes" id="topModes">
+      <button class="top-mode" id="goPractice" type="button">
+        <span class="ic">🎮</span>
+        <span class="nm">练习模式</span>
+        <span class="ds">4 种玩法，单题无限时间，错了能重看</span>
+      </button>
+      <button class="top-mode exam" id="goExam" type="button">
+        <span class="ic">📝</span>
+        <span class="nm">考试模式</span>
+        <span class="ds">看图选词，每题 30 秒，自动评分</span>
+      </button>
+    </div>
+
+    <details class="panel" id="settingsPanel">
+      <summary class="panel-t">练习设置</summary>
+      <label class="opt"><input type="checkbox" id="optZh"><span class="track"></span><span class="lbl">显示中文</span></label>
+      <label class="opt"><input type="checkbox" id="optAuto" checked><span class="track"></span><span class="lbl">自动朗读题目</span></label>
+      <label class="opt"><input type="checkbox" id="optTimer" checked><span class="track"></span><span class="lbl">计时闯关</span></label>
+      <label class="opt"><input type="checkbox" id="optSlow"><span class="track"></span><span class="lbl">慢速发音（跟读）</span></label>
+      <div class="opt-row">
+        <span class="opt-lbl">每轮题数</span>
+        <div class="seg" id="roundSeg">
+          <button type="button" data-n="10">10 题</button>
+          <button type="button" data-n="20">20 题</button>
+          <button type="button" data-n="30">30 题</button>
+        </div>
+      </div>
+    </details>
+
+    <div class="panel" id="voicePanel">
+      <div class="panel-t">发音方式</div>
+      <div class="voice-tip" id="clipNote"></div>
+      <div class="voice-row fallback">
+        <select id="voiceSel"></select>
+        <button class="btn ghost sm" id="btnTestVoice">试听</button>
+      </div>
+      <div class="voice-tip dim" id="voiceTip"></div>
+    </div>
+
+    <div class="panel" id="progressPanel">
+      <div class="panel-t">学习进度</div>
+      <div class="bar"><i id="progBar"></i></div>
+      <div class="prog-t" id="progText"></div>
+      <div class="row-btns">
+        <button class="btn ghost" id="btnBrowse">全部单词</button>
+        <button class="btn ghost" id="btnWeak">错题本 <b id="weakN">0</b></button>
+        <button class="btn ghost" id="btnReset">清空进度</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 闪卡 ============ -->
+  <section class="screen" id="scr-flash">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="bar mini"><i id="flashBar"></i></div>
+      <div class="count" id="flashCount"></div>
+    </div>
+    <div class="card-wrap" id="flashWrap">
+      <div class="flashcard" id="flashCard">
+        <div class="fc-face fc-front">
+          <img id="fcImg" alt="">
+          <button class="speak" id="fcSpeak" aria-label="朗读">🔊</button>
+          <div class="hint">点一下看单词</div>
+        </div>
+        <div class="fc-face fc-back">
+          <div class="fc-en" id="fcEn"></div>
+          <div class="fc-zh" id="fcZh"></div>
+          <img id="fcImg2" alt="">
+          <button class="speak" id="fcSpeak2" aria-label="朗读">🔊</button>
+        </div>
+      </div>
+    </div>
+    <div class="flash-nav">
+      <button class="btn round" id="fcPrev">‹ 上一个</button>
+      <button class="btn round" id="fcShuffle">🔀 打乱</button>
+      <button class="btn round" id="fcNext">下一个 ›</button>
+    </div>
+    <div class="catbar" id="fcCats"></div>
+  </section>
+
+  <!-- ============ 闯关答题 ============ -->
+  <section class="screen" id="scr-quiz">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="bar mini"><i id="quizBar"></i></div>
+      <div class="count" id="quizCount"></div>
+    </div>
+
+    <div class="hud">
+      <div class="chip" id="hudScore">⭐ 0</div>
+      <div class="chip" id="hudStreak">🔥 0</div>
+      <div class="chip timer" id="hudTimer">⏱ 60</div>
+    </div>
+
+    <div class="prompt" id="quizPrompt"></div>
+
+    <div class="opts-grid" id="quizOpts"></div>
+
+    <div class="verdict" id="verdict"><div class="v-in"><div class="v-emoji"></div><div class="v-text"></div><button class="btn go" id="vNext">继续</button><button class="v-quit" id="vQuit">退出本轮</button></div></div>
+  </section>
+
+  <!-- ============ 成绩单 ============ -->
+  <section class="screen" id="scr-result">
+    <div class="result">
+      <div class="medal" id="rMedal">🏆</div>
+      <div class="r-score"><b id="rScore">0</b><span>分</span></div>
+      <div class="r-rate" id="rRate"></div>
+      <div class="r-stats">
+        <div><b id="rTime">0</b><span>用时(秒)</span></div>
+        <div><b id="rRight">0</b><span>答对</span></div>
+        <div><b id="rWrong">0</b><span>答错</span></div>
+      </div>
+      <div class="panel" id="rWrongBox" hidden>
+        <div class="panel-t">这些词要多练练</div>
+        <div class="wronglist" id="rWrongList"></div>
+      </div>
+      <div class="row-btns">
+        <button class="btn" id="btnAgain">再来一轮</button>
+        <button class="btn ghost" data-back>回到首页</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 全部单词 ============ -->
+  <section class="screen" id="scr-browse">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="title-sm">全部单词</div>
+      <div class="count" id="browseCount"></div>
+    </div>
+    <div class="catbar" id="browseCats"></div>
+    <div class="wordgrid" id="wordGrid"></div>
+  </section>
+
+  <!-- ============ 错题本 ============ -->
+  <section class="screen" id="scr-weak">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="title-sm">错题本</div>
+      <div class="count" id="weakCount"></div>
+    </div>
+    <div class="wordgrid" id="weakGrid"></div>
+  </section>
+
+  <!-- ============ 练习模式：选玩法 / 选章节 ============ -->
+  <section class="screen" id="scr-practice">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="title-sm">练习模式</div>
+      <div class="count" id="poolInfo">134 词</div>
+    </div>
+    <p class="hint-p">单题不限时，错了可以重看，有错题本</p>
+    <div class="seg" id="poolSeg">
+      <button type="button" data-pool="all" class="on">📦 全部 134</button>
+      <button type="button" data-pool="cat">🗂 按章节</button>
+    </div>
+    <div class="modes" id="practiceList"></div>
+    <div class="cats" id="chapterList" hidden></div>
+  </section>
+
+  <!-- ============ 考试配置 ============ -->
+  <section class="screen" id="scr-exam-config">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="title-sm">考试模式</div>
+      <div class="count"></div>
+    </div>
+    <div class="exam-info panel">
+      <div class="panel-t">📝 考试规则</div>
+      <ul class="rules">
+        <li>题型：「看图选词」和"看图认词"比赛一致</li>
+        <li>每题 30 秒，超时自动按错计</li>
+        <li>答题后立即显示对/错，1.5 秒后自动进下一题</li>
+        <li>考试不进入错题本，不影响练习掌握度</li>
+        <li>结束后打分（A / B / C / D），可以重看错题</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-t">题数</div>
+      <div class="seg" id="examN">
+        <button type="button" data-n="10">10 题</button>
+        <button type="button" data-n="20">20 题</button>
+        <button type="button" data-n="30">30 题</button>
+        <button type="button" data-n="all">全部 134 题</button>
+      </div>
+    </div>
+    <button class="btn primary big" id="btnStartExam">开始考试</button>
+  </section>
+
+  <!-- ============ 考试倒计时 3-2-1 ============ -->
+  <section class="screen" id="scr-exam-pre">
+    <div class="pre-count">
+      <div class="pre-num" id="examPreNum">3</div>
+      <div class="pre-tip">准备好了吗</div>
+    </div>
+  </section>
+
+  <!-- ============ 考试答题 ============ -->
+  <section class="screen" id="scr-exam-play">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="bar mini"><i id="examBar"></i></div>
+      <div class="count"><span id="examCount"></span></div>
+    </div>
+    <div class="exam-stage">
+      <div class="exam-timer">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="44" class="bg"/>
+          <circle cx="50" cy="50" r="44" class="fg" id="examRingFg"/>
+        </svg>
+        <div class="exam-timer-text" id="examSecText">30</div>
+      </div>
+      <div class="exam-prompt">选出对应的英文单词</div>
+      <div class="exam-img"><img id="examImg" alt=""></div>
+      <div class="opts-grid" id="examOpts"></div>
+    </div>
+    <div class="exam-flash" id="examFlash" hidden></div>
+  </section>
+
+  <!-- ============ 考试结果 ============ -->
+  <section class="screen" id="scr-exam-result">
+    <div class="exam-result">
+      <div class="exam-grade" id="examGradeLetter">A</div>
+      <div class="exam-rate" id="examRateLine">16 / 20  ·  80%</div>
+      <div class="exam-comment" id="examComment">优秀！</div>
+      <div class="exam-stats">
+        <div><b id="examCorrectN">0</b><span>答对</span></div>
+        <div><b id="examWrongN">0</b><span>答错</span></div>
+        <div><b id="examTimeN">0</b><span>用时(秒)</span></div>
+      </div>
+      <div class="row-btns">
+        <button class="btn" id="btnExamReview">查看错题</button>
+        <button class="btn ghost" data-back>回到首页</button>
+        <button class="btn ghost" id="btnExamAgain">再考一次</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 错题回顾 ============ -->
+  <section class="screen" id="scr-exam-review">
+    <div class="topbar">
+      <button class="icon" data-back>‹</button>
+      <div class="title-sm">错题回顾</div>
+      <div class="count" id="examReviewCount"></div>
+    </div>
+    <p class="hint-p">点 🔊 重听发音（图+正确单词）</p>
+    <div class="exam-review-list" id="examReviewList"></div>
+  </section>
+
+</div>
+<div class="toast" id="toast"></div>
+<script src="data.js?v=2"></script>
+<script src="app.js?v=3"></script>
+</body>
+</html>

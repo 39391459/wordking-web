@@ -1,0 +1,1231 @@
+{
+ "title": "2026 英语月 · 单词王（大班级）",
+ "total": 134,
+ "categories": [
+  "衣物",
+  "水果",
+  "动物",
+  "身体",
+  "动作",
+  "食物",
+  "感受",
+  "数字",
+  "家人",
+  "家居",
+  "玩具",
+  "颜色",
+  "自然",
+  "交通",
+  "餐具"
+ ],
+ "words": [
+  {
+   "en": "t-shirt",
+   "zh": "T恤衫",
+   "cat": "衣物",
+   "say": "tee shirt",
+   "img": "img/001-t-shirt.jpg",
+   "id": 1,
+   "audio": "audio/w001.mp3"
+  },
+  {
+   "en": "dress",
+   "zh": "连衣裙",
+   "cat": "衣物",
+   "say": "dress",
+   "img": "img/002-dress.jpg",
+   "id": 2,
+   "audio": "audio/w002.mp3"
+  },
+  {
+   "en": "cap",
+   "zh": "鸭舌帽",
+   "cat": "衣物",
+   "say": "cap",
+   "img": "img/003-cap.jpg",
+   "id": 3,
+   "audio": "audio/w003.mp3"
+  },
+  {
+   "en": "shorts",
+   "zh": "短裤",
+   "cat": "衣物",
+   "say": "shorts",
+   "img": "img/004-shorts.jpg",
+   "id": 4,
+   "audio": "audio/w004.mp3"
+  },
+  {
+   "en": "apple",
+   "zh": "苹果",
+   "cat": "水果",
+   "say": "apple",
+   "img": "img/005-apple.jpg",
+   "id": 5,
+   "audio": "audio/w005.mp3"
+  },
+  {
+   "en": "pear",
+   "zh": "梨",
+   "cat": "水果",
+   "say": "pear",
+   "img": "img/006-pear.jpg",
+   "id": 6,
+   "audio": "audio/w006.mp3"
+  },
+  {
+   "en": "banana",
+   "zh": "香蕉",
+   "cat": "水果",
+   "say": "banana",
+   "img": "img/007-banana.jpg",
+   "id": 7,
+   "audio": "audio/w007.mp3"
+  },
+  {
+   "en": "honey",
+   "zh": "蜂蜜",
+   "cat": "食物",
+   "say": "honey",
+   "img": "img/008-honey.jpg",
+   "id": 8,
+   "audio": "audio/w008.mp3"
+  },
+  {
+   "en": "rabbit",
+   "zh": "兔子",
+   "cat": "动物",
+   "say": "rabbit",
+   "img": "img/009-rabbit.jpg",
+   "id": 9,
+   "audio": "audio/w009.mp3"
+  },
+  {
+   "en": "cat",
+   "zh": "猫",
+   "cat": "动物",
+   "say": "cat",
+   "img": "img/010-cat.jpg",
+   "id": 10,
+   "audio": "audio/w010.mp3"
+  },
+  {
+   "en": "monkey",
+   "zh": "猴子",
+   "cat": "动物",
+   "say": "monkey",
+   "img": "img/011-monkey.jpg",
+   "id": 11,
+   "audio": "audio/w011.mp3"
+  },
+  {
+   "en": "pig",
+   "zh": "猪",
+   "cat": "动物",
+   "say": "pig",
+   "img": "img/012-pig.jpg",
+   "id": 12,
+   "audio": "audio/w012.mp3"
+  },
+  {
+   "en": "tiger",
+   "zh": "老虎",
+   "cat": "动物",
+   "say": "tiger",
+   "img": "img/013-tiger.jpg",
+   "id": 13,
+   "audio": "audio/w013.mp3"
+  },
+  {
+   "en": "papaya",
+   "zh": "木瓜",
+   "cat": "水果",
+   "say": "papaya",
+   "img": "img/014-papaya.jpg",
+   "id": 14,
+   "audio": "audio/w014.mp3"
+  },
+  {
+   "en": "eyes",
+   "zh": "眼睛",
+   "cat": "身体",
+   "say": "eyes",
+   "img": "img/015-eyes.jpg",
+   "id": 15,
+   "audio": "audio/w015.mp3"
+  },
+  {
+   "en": "ears",
+   "zh": "耳朵",
+   "cat": "身体",
+   "say": "ears",
+   "img": "img/016-ears.jpg",
+   "id": 16,
+   "audio": "audio/w016.mp3"
+  },
+  {
+   "en": "hop",
+   "zh": "单脚跳",
+   "cat": "动作",
+   "say": "hop",
+   "img": "img/017-hop.jpg",
+   "id": 17,
+   "audio": "audio/w017.mp3"
+  },
+  {
+   "en": "tiptoe",
+   "zh": "踮脚尖走",
+   "cat": "动作",
+   "say": "tiptoe",
+   "img": "img/018-tiptoe.jpg",
+   "id": 18,
+   "audio": "audio/w018.mp3"
+  },
+  {
+   "en": "stop",
+   "zh": "停",
+   "cat": "动作",
+   "say": "stop",
+   "img": "img/019-stop.jpg",
+   "id": 19,
+   "audio": "audio/w019.mp3"
+  },
+  {
+   "en": "jump",
+   "zh": "跳",
+   "cat": "动作",
+   "say": "jump",
+   "img": "img/020-jump.jpg",
+   "id": 20,
+   "audio": "audio/w020.mp3"
+  },
+  {
+   "en": "yogurt",
+   "zh": "酸奶",
+   "cat": "食物",
+   "say": "yogurt",
+   "img": "img/021-yogurt.jpg",
+   "id": 21,
+   "audio": "audio/w021.mp3"
+  },
+  {
+   "en": "milk",
+   "zh": "牛奶",
+   "cat": "食物",
+   "say": "milk",
+   "img": "img/022-milk.jpg",
+   "id": 22,
+   "audio": "audio/w022.mp3"
+  },
+  {
+   "en": "juice",
+   "zh": "果汁",
+   "cat": "食物",
+   "say": "juice",
+   "img": "img/023-juice.jpg",
+   "id": 23,
+   "audio": "audio/w023.mp3"
+  },
+  {
+   "en": "water",
+   "zh": "水",
+   "cat": "食物",
+   "say": "water",
+   "img": "img/024-water.jpg",
+   "id": 24,
+   "audio": "audio/w024.mp3"
+  },
+  {
+   "en": "bed",
+   "zh": "床",
+   "cat": "家居",
+   "say": "bed",
+   "img": "img/025-bed.jpg",
+   "id": 25,
+   "audio": "audio/w025.mp3"
+  },
+  {
+   "en": "moon",
+   "zh": "月亮",
+   "cat": "自然",
+   "say": "moon",
+   "img": "img/026-moon.jpg",
+   "id": 26,
+   "audio": "audio/w026.mp3"
+  },
+  {
+   "en": "star",
+   "zh": "星星",
+   "cat": "自然",
+   "say": "star",
+   "img": "img/027-star.jpg",
+   "id": 27,
+   "audio": "audio/w027.mp3"
+  },
+  {
+   "en": "mommy",
+   "zh": "妈妈",
+   "cat": "家人",
+   "say": "mommy",
+   "img": "img/028-mommy.jpg",
+   "id": 28,
+   "audio": "audio/w028.mp3"
+  },
+  {
+   "en": "daddy",
+   "zh": "爸爸",
+   "cat": "家人",
+   "say": "daddy",
+   "img": "img/029-daddy.jpg",
+   "id": 29,
+   "audio": "audio/w029.mp3"
+  },
+  {
+   "en": "hippo",
+   "zh": "河马",
+   "cat": "动物",
+   "say": "hippo",
+   "img": "img/030-hippo.jpg",
+   "id": 30,
+   "audio": "audio/w030.mp3"
+  },
+  {
+   "en": "lion",
+   "zh": "狮子",
+   "cat": "动物",
+   "say": "lion",
+   "img": "img/031-lion.jpg",
+   "id": 31,
+   "audio": "audio/w031.mp3"
+  },
+  {
+   "en": "elephant",
+   "zh": "大象",
+   "cat": "动物",
+   "say": "elephant",
+   "img": "img/032-elephant.jpg",
+   "id": 32,
+   "audio": "audio/w032.mp3"
+  },
+  {
+   "en": "wolf",
+   "zh": "狼",
+   "cat": "动物",
+   "say": "wolf",
+   "img": "img/033-wolf.jpg",
+   "id": 33,
+   "audio": "audio/w033.mp3"
+  },
+  {
+   "en": "turtle",
+   "zh": "乌龟",
+   "cat": "动物",
+   "say": "turtle",
+   "img": "img/034-turtle.jpg",
+   "id": 34,
+   "audio": "audio/w034.mp3"
+  },
+  {
+   "en": "red",
+   "zh": "红色",
+   "cat": "颜色",
+   "say": "red",
+   "img": "img/035-red.jpg",
+   "id": 35,
+   "audio": "audio/w035.mp3"
+  },
+  {
+   "en": "yellow",
+   "zh": "黄色",
+   "cat": "颜色",
+   "say": "yellow",
+   "img": "img/036-yellow.jpg",
+   "id": 36,
+   "audio": "audio/w036.mp3"
+  },
+  {
+   "en": "blue",
+   "zh": "蓝色",
+   "cat": "颜色",
+   "say": "blue",
+   "img": "img/037-blue.jpg",
+   "id": 37,
+   "audio": "audio/w037.mp3"
+  },
+  {
+   "en": "green",
+   "zh": "绿色",
+   "cat": "颜色",
+   "say": "green",
+   "img": "img/038-green.jpg",
+   "id": 38,
+   "audio": "audio/w038.mp3"
+  },
+  {
+   "en": "balloon",
+   "zh": "气球",
+   "cat": "玩具",
+   "say": "balloon",
+   "img": "img/039-balloon.jpg",
+   "id": 39,
+   "audio": "audio/w039.mp3"
+  },
+  {
+   "en": "blow",
+   "zh": "吹",
+   "cat": "动作",
+   "say": "blow",
+   "img": "img/040-blow.jpg",
+   "id": 40,
+   "audio": "audio/w040.mp3"
+  },
+  {
+   "en": "teeth",
+   "zh": "牙齿",
+   "cat": "身体",
+   "say": "teeth",
+   "img": "img/041-teeth.jpg",
+   "id": 41,
+   "audio": "audio/w041.mp3"
+  },
+  {
+   "en": "hands",
+   "zh": "手",
+   "cat": "身体",
+   "say": "hands",
+   "img": "img/042-hands.jpg",
+   "id": 42,
+   "audio": "audio/w042.mp3"
+  },
+  {
+   "en": "towel",
+   "zh": "毛巾",
+   "cat": "家居",
+   "say": "towel",
+   "img": "img/043-towel.jpg",
+   "id": 43,
+   "audio": "audio/w043.mp3"
+  },
+  {
+   "en": "tummy",
+   "zh": "肚子",
+   "cat": "身体",
+   "say": "tummy",
+   "img": "img/044-tummy.jpg",
+   "id": 44,
+   "audio": "audio/w044.mp3"
+  },
+  {
+   "en": "boot",
+   "zh": "靴子",
+   "cat": "衣物",
+   "say": "boot",
+   "img": "img/045-boot.jpg",
+   "id": 45,
+   "audio": "audio/w045.mp3"
+  },
+  {
+   "en": "ball",
+   "zh": "球",
+   "cat": "玩具",
+   "say": "ball",
+   "img": "img/046-ball.jpg",
+   "id": 46,
+   "audio": "audio/w046.mp3"
+  },
+  {
+   "en": "blocks",
+   "zh": "积木",
+   "cat": "玩具",
+   "say": "blocks",
+   "img": "img/047-blocks.jpg",
+   "id": 47,
+   "audio": "audio/w047.mp3"
+  },
+  {
+   "en": "doll",
+   "zh": "娃娃",
+   "cat": "玩具",
+   "say": "doll",
+   "img": "img/048-doll.jpg",
+   "id": 48,
+   "audio": "audio/w048.mp3"
+  },
+  {
+   "en": "kite",
+   "zh": "风筝",
+   "cat": "玩具",
+   "say": "kite",
+   "img": "img/049-kite.jpg",
+   "id": 49,
+   "audio": "audio/w049.mp3"
+  },
+  {
+   "en": "toy",
+   "zh": "玩具",
+   "cat": "玩具",
+   "say": "toy",
+   "img": "img/050-toy.jpg",
+   "id": 50,
+   "audio": "audio/w050.mp3"
+  },
+  {
+   "en": "car",
+   "zh": "小汽车",
+   "cat": "玩具",
+   "say": "car",
+   "img": "img/051-car.jpg",
+   "id": 51,
+   "audio": "audio/w051.mp3"
+  },
+  {
+   "en": "yo-yo",
+   "zh": "溜溜球",
+   "cat": "玩具",
+   "say": "yo-yo",
+   "img": "img/052-yo-yo.jpg",
+   "id": 52,
+   "audio": "audio/w052.mp3"
+  },
+  {
+   "en": "arms",
+   "zh": "手臂",
+   "cat": "身体",
+   "say": "arms",
+   "img": "img/053-arms.jpg",
+   "id": 53,
+   "audio": "audio/w053.mp3"
+  },
+  {
+   "en": "head",
+   "zh": "头",
+   "cat": "身体",
+   "say": "head",
+   "img": "img/054-head.jpg",
+   "id": 54,
+   "audio": "audio/w054.mp3"
+  },
+  {
+   "en": "legs",
+   "zh": "腿",
+   "cat": "身体",
+   "say": "legs",
+   "img": "img/055-legs.jpg",
+   "id": 55,
+   "audio": "audio/w055.mp3"
+  },
+  {
+   "en": "fingers",
+   "zh": "手指",
+   "cat": "身体",
+   "say": "fingers",
+   "img": "img/056-fingers.jpg",
+   "id": 56,
+   "audio": "audio/w056.mp3"
+  },
+  {
+   "en": "feet",
+   "zh": "脚",
+   "cat": "身体",
+   "say": "feet",
+   "img": "img/057-feet.jpg",
+   "id": 57,
+   "audio": "audio/w057.mp3"
+  },
+  {
+   "en": "bird",
+   "zh": "鸟",
+   "cat": "动物",
+   "say": "bird",
+   "img": "img/058-bird.jpg",
+   "id": 58,
+   "audio": "audio/w058.mp3"
+  },
+  {
+   "en": "eagle",
+   "zh": "老鹰",
+   "cat": "动物",
+   "say": "eagle",
+   "img": "img/059-eagle.jpg",
+   "id": 59,
+   "audio": "audio/w059.mp3"
+  },
+  {
+   "en": "butterfly",
+   "zh": "蝴蝶",
+   "cat": "动物",
+   "say": "butterfly",
+   "img": "img/060-butterfly.jpg",
+   "id": 60,
+   "audio": "audio/w060.mp3"
+  },
+  {
+   "en": "owl",
+   "zh": "猫头鹰",
+   "cat": "动物",
+   "say": "owl",
+   "img": "img/061-owl.jpg",
+   "id": 61,
+   "audio": "audio/w061.mp3"
+  },
+  {
+   "en": "dragonfly",
+   "zh": "蜻蜓",
+   "cat": "动物",
+   "say": "dragon fly",
+   "img": "img/062-dragonfly.jpg",
+   "id": 62,
+   "audio": "audio/w062.mp3"
+  },
+  {
+   "en": "chick",
+   "zh": "小鸡",
+   "cat": "动物",
+   "say": "chick",
+   "img": "img/063-chick.jpg",
+   "id": 63,
+   "audio": "audio/w063.mp3"
+  },
+  {
+   "en": "grandpa",
+   "zh": "爷爷",
+   "cat": "家人",
+   "say": "grandpa",
+   "img": "img/064-grandpa.jpg",
+   "id": 64,
+   "audio": "audio/w064.mp3"
+  },
+  {
+   "en": "grandma",
+   "zh": "奶奶",
+   "cat": "家人",
+   "say": "grandma",
+   "img": "img/065-grandma.jpg",
+   "id": 65,
+   "audio": "audio/w065.mp3"
+  },
+  {
+   "en": "uncle",
+   "zh": "叔叔",
+   "cat": "家人",
+   "say": "uncle",
+   "img": "img/066-uncle.jpg",
+   "id": 66,
+   "audio": "audio/w066.mp3"
+  },
+  {
+   "en": "aunt",
+   "zh": "阿姨",
+   "cat": "家人",
+   "say": "aunt",
+   "img": "img/067-aunt.jpg",
+   "id": 67,
+   "audio": "audio/w067.mp3"
+  },
+  {
+   "en": "brother",
+   "zh": "哥哥/弟弟",
+   "cat": "家人",
+   "say": "brother",
+   "img": "img/068-brother.jpg",
+   "id": 68,
+   "audio": "audio/w068.mp3"
+  },
+  {
+   "en": "sister",
+   "zh": "姐姐/妹妹",
+   "cat": "家人",
+   "say": "sister",
+   "img": "img/069-sister.jpg",
+   "id": 69,
+   "audio": "audio/w069.mp3"
+  },
+  {
+   "en": "cookies",
+   "zh": "饼干",
+   "cat": "食物",
+   "say": "cookies",
+   "img": "img/070-cookies.jpg",
+   "id": 70,
+   "audio": "audio/w070.mp3"
+  },
+  {
+   "en": "egg",
+   "zh": "鸡蛋",
+   "cat": "食物",
+   "say": "egg",
+   "img": "img/071-egg.jpg",
+   "id": 71,
+   "audio": "audio/w071.mp3"
+  },
+  {
+   "en": "fish",
+   "zh": "鱼",
+   "cat": "动物",
+   "say": "fish",
+   "img": "img/072-fish.jpg",
+   "id": 72,
+   "audio": "audio/w072.mp3"
+  },
+  {
+   "en": "meat",
+   "zh": "肉",
+   "cat": "食物",
+   "say": "meat",
+   "img": "img/073-meat.jpg",
+   "id": 73,
+   "audio": "audio/w073.mp3"
+  },
+  {
+   "en": "noodles",
+   "zh": "面条",
+   "cat": "食物",
+   "say": "noodles",
+   "img": "img/074-noodles.jpg",
+   "id": 74,
+   "audio": "audio/w074.mp3"
+  },
+  {
+   "en": "six",
+   "zh": "六",
+   "cat": "数字",
+   "say": "six",
+   "img": "img/075-six.jpg",
+   "id": 75,
+   "audio": "audio/w075.mp3"
+  },
+  {
+   "en": "seven",
+   "zh": "七",
+   "cat": "数字",
+   "say": "seven",
+   "img": "img/076-seven.jpg",
+   "id": 76,
+   "audio": "audio/w076.mp3"
+  },
+  {
+   "en": "eight",
+   "zh": "八",
+   "cat": "数字",
+   "say": "eight",
+   "img": "img/077-eight.jpg",
+   "id": 77,
+   "audio": "audio/w077.mp3"
+  },
+  {
+   "en": "door",
+   "zh": "门",
+   "cat": "家居",
+   "say": "door",
+   "img": "img/078-door.jpg",
+   "id": 78,
+   "audio": "audio/w078.mp3"
+  },
+  {
+   "en": "chair",
+   "zh": "椅子",
+   "cat": "家居",
+   "say": "chair",
+   "img": "img/079-chair.jpg",
+   "id": 79,
+   "audio": "audio/w079.mp3"
+  },
+  {
+   "en": "table",
+   "zh": "桌子",
+   "cat": "家居",
+   "say": "table",
+   "img": "img/080-table.jpg",
+   "id": 80,
+   "audio": "audio/w080.mp3"
+  },
+  {
+   "en": "floor",
+   "zh": "地板",
+   "cat": "家居",
+   "say": "floor",
+   "img": "img/081-floor.jpg",
+   "id": 81,
+   "audio": "audio/w081.mp3"
+  },
+  {
+   "en": "sky",
+   "zh": "天空",
+   "cat": "自然",
+   "say": "sky",
+   "img": "img/082-sky.jpg",
+   "id": 82,
+   "audio": "audio/w082.mp3"
+  },
+  {
+   "en": "sun",
+   "zh": "太阳",
+   "cat": "自然",
+   "say": "sun",
+   "img": "img/083-sun.jpg",
+   "id": 83,
+   "audio": "audio/w083.mp3"
+  },
+  {
+   "en": "tree",
+   "zh": "树",
+   "cat": "自然",
+   "say": "tree",
+   "img": "img/084-tree.jpg",
+   "id": 84,
+   "audio": "audio/w084.mp3"
+  },
+  {
+   "en": "grass",
+   "zh": "草",
+   "cat": "自然",
+   "say": "grass",
+   "img": "img/085-grass.jpg",
+   "id": 85,
+   "audio": "audio/w085.mp3"
+  },
+  {
+   "en": "chopsticks",
+   "zh": "筷子",
+   "cat": "餐具",
+   "say": "chopsticks",
+   "img": "img/086-chopsticks.jpg",
+   "id": 86,
+   "audio": "audio/w086.mp3"
+  },
+  {
+   "en": "fork",
+   "zh": "叉子",
+   "cat": "餐具",
+   "say": "fork",
+   "img": "img/087-fork.jpg",
+   "id": 87,
+   "audio": "audio/w087.mp3"
+  },
+  {
+   "en": "knife",
+   "zh": "刀",
+   "cat": "餐具",
+   "say": "knife",
+   "img": "img/088-knife.jpg",
+   "id": 88,
+   "audio": "audio/w088.mp3"
+  },
+  {
+   "en": "plate",
+   "zh": "盘子",
+   "cat": "餐具",
+   "say": "plate",
+   "img": "img/089-plate.jpg",
+   "id": 89,
+   "audio": "audio/w089.mp3"
+  },
+  {
+   "en": "tired",
+   "zh": "累的",
+   "cat": "感受",
+   "say": "tired",
+   "img": "img/090-tired.jpg",
+   "id": 90,
+   "audio": "audio/w090.mp3"
+  },
+  {
+   "en": "angry",
+   "zh": "生气的",
+   "cat": "感受",
+   "say": "angry",
+   "img": "img/091-angry.jpg",
+   "id": 91,
+   "audio": "audio/w091.mp3"
+  },
+  {
+   "en": "scared",
+   "zh": "害怕的",
+   "cat": "感受",
+   "say": "scared",
+   "img": "img/092-scared.jpg",
+   "id": 92,
+   "audio": "audio/w092.mp3"
+  },
+  {
+   "en": "hungry",
+   "zh": "饿的",
+   "cat": "感受",
+   "say": "hungry",
+   "img": "img/093-hungry.jpg",
+   "id": 93,
+   "audio": "audio/w093.mp3"
+  },
+  {
+   "en": "full",
+   "zh": "饱的",
+   "cat": "感受",
+   "say": "full",
+   "img": "img/094-full.jpg",
+   "id": 94,
+   "audio": "audio/w094.mp3"
+  },
+  {
+   "en": "grapes",
+   "zh": "葡萄",
+   "cat": "水果",
+   "say": "grapes",
+   "img": "img/095-grapes.jpg",
+   "id": 95,
+   "audio": "audio/w095.mp3"
+  },
+  {
+   "en": "kiwi",
+   "zh": "猕猴桃",
+   "cat": "水果",
+   "say": "kiwi",
+   "img": "img/096-kiwi.jpg",
+   "id": 96,
+   "audio": "audio/w096.mp3"
+  },
+  {
+   "en": "peach",
+   "zh": "桃子",
+   "cat": "水果",
+   "say": "peach",
+   "img": "img/097-peach.jpg",
+   "id": 97,
+   "audio": "audio/w097.mp3"
+  },
+  {
+   "en": "cherry",
+   "zh": "樱桃",
+   "cat": "水果",
+   "say": "cherry",
+   "img": "img/098-cherry.jpg",
+   "id": 98,
+   "audio": "audio/w098.mp3"
+  },
+  {
+   "en": "pineapple",
+   "zh": "菠萝",
+   "cat": "水果",
+   "say": "pineapple",
+   "img": "img/099-pineapple.jpg",
+   "id": 99,
+   "audio": "audio/w099.mp3"
+  },
+  {
+   "en": "lemon",
+   "zh": "柠檬",
+   "cat": "水果",
+   "say": "lemon",
+   "img": "img/100-lemon.jpg",
+   "id": 100,
+   "audio": "audio/w100.mp3"
+  },
+  {
+   "en": "watermelon",
+   "zh": "西瓜",
+   "cat": "水果",
+   "say": "watermelon",
+   "img": "img/101-watermelon.jpg",
+   "id": 101,
+   "audio": "audio/w101.mp3"
+  },
+  {
+   "en": "corn",
+   "zh": "玉米",
+   "cat": "水果",
+   "say": "corn",
+   "img": "img/102-corn.jpg",
+   "id": 102,
+   "audio": "audio/w102.mp3"
+  },
+  {
+   "en": "mango",
+   "zh": "芒果",
+   "cat": "水果",
+   "say": "mango",
+   "img": "img/103-mango.jpg",
+   "id": 103,
+   "audio": "audio/w103.mp3"
+  },
+  {
+   "en": "black",
+   "zh": "黑色",
+   "cat": "颜色",
+   "say": "black",
+   "img": "img/104-black.jpg",
+   "id": 104,
+   "audio": "audio/w104.mp3"
+  },
+  {
+   "en": "white",
+   "zh": "白色",
+   "cat": "颜色",
+   "say": "white",
+   "img": "img/105-white.jpg",
+   "id": 105,
+   "audio": "audio/w105.mp3"
+  },
+  {
+   "en": "orange",
+   "zh": "橙色",
+   "cat": "颜色",
+   "say": "orange",
+   "img": "img/106-orange.jpg",
+   "id": 106,
+   "audio": "audio/w106.mp3"
+  },
+  {
+   "en": "birthday",
+   "zh": "生日",
+   "cat": "玩具",
+   "say": "birthday",
+   "img": "img/107-birthday.jpg",
+   "id": 107,
+   "audio": "audio/w107.mp3"
+  },
+  {
+   "en": "hat",
+   "zh": "帽子",
+   "cat": "玩具",
+   "say": "hat",
+   "img": "img/108-hat.jpg",
+   "id": 108,
+   "audio": "audio/w108.mp3"
+  },
+  {
+   "en": "candle",
+   "zh": "蜡烛",
+   "cat": "玩具",
+   "say": "candle",
+   "img": "img/109-candle.jpg",
+   "id": 109,
+   "audio": "audio/w109.mp3"
+  },
+  {
+   "en": "bow",
+   "zh": "蝴蝶结",
+   "cat": "玩具",
+   "say": "bow",
+   "img": "img/110-bow.jpg",
+   "id": 110,
+   "audio": "audio/w110.mp3"
+  },
+  {
+   "en": "fast/slow",
+   "zh": "快 / 慢",
+   "cat": "动作",
+   "say": "fast. slow.",
+   "img": "img/111-fast-slow.jpg",
+   "id": 111,
+   "audio": "audio/w111.mp3"
+  },
+  {
+   "en": "play hopscotch",
+   "zh": "玩跳房子",
+   "cat": "动作",
+   "say": "play hopscotch",
+   "img": "img/112-play-hopscotch.jpg",
+   "id": 112,
+   "audio": "audio/w112.mp3"
+  },
+  {
+   "en": "play ping-pong",
+   "zh": "玩乒乓球",
+   "cat": "动作",
+   "say": "play ping pong",
+   "img": "img/113-play-ping-pong.jpg",
+   "id": 113,
+   "audio": "audio/w113.mp3"
+  },
+  {
+   "en": "play soccer",
+   "zh": "踢足球",
+   "cat": "动作",
+   "say": "play soccer",
+   "img": "img/114-play-soccer.jpg",
+   "id": 114,
+   "audio": "audio/w114.mp3"
+  },
+  {
+   "en": "panda",
+   "zh": "熊猫",
+   "cat": "动物",
+   "say": "panda",
+   "img": "img/115-panda.jpg",
+   "id": 115,
+   "audio": "audio/w115.mp3"
+  },
+  {
+   "en": "bear",
+   "zh": "熊",
+   "cat": "动物",
+   "say": "bear",
+   "img": "img/116-bear.jpg",
+   "id": 116,
+   "audio": "audio/w116.mp3"
+  },
+  {
+   "en": "peacock",
+   "zh": "孔雀",
+   "cat": "动物",
+   "say": "peacock",
+   "img": "img/117-peacock.jpg",
+   "id": 117,
+   "audio": "audio/w117.mp3"
+  },
+  {
+   "en": "squirrel",
+   "zh": "松鼠",
+   "cat": "动物",
+   "say": "squirrel",
+   "img": "img/118-squirrel.jpg",
+   "id": 118,
+   "audio": "audio/w118.mp3"
+  },
+  {
+   "en": "snake",
+   "zh": "蛇",
+   "cat": "动物",
+   "say": "snake",
+   "img": "img/119-snake.jpg",
+   "id": 119,
+   "audio": "audio/w119.mp3"
+  },
+  {
+   "en": "bicycle",
+   "zh": "自行车",
+   "cat": "交通",
+   "say": "bicycle",
+   "img": "img/120-bicycle.jpg",
+   "id": 120,
+   "audio": "audio/w120.mp3"
+  },
+  {
+   "en": "boat",
+   "zh": "小船",
+   "cat": "交通",
+   "say": "boat",
+   "img": "img/121-boat.jpg",
+   "id": 121,
+   "audio": "audio/w121.mp3"
+  },
+  {
+   "en": "bus",
+   "zh": "公共汽车",
+   "cat": "交通",
+   "say": "bus",
+   "img": "img/122-bus.jpg",
+   "id": 122,
+   "audio": "audio/w122.mp3"
+  },
+  {
+   "en": "motorcycle",
+   "zh": "摩托车",
+   "cat": "交通",
+   "say": "motorcycle",
+   "img": "img/123-motorcycle.jpg",
+   "id": 123,
+   "audio": "audio/w123.mp3"
+  },
+  {
+   "en": "plane",
+   "zh": "飞机",
+   "cat": "交通",
+   "say": "plane",
+   "img": "img/124-plane.jpg",
+   "id": 124,
+   "audio": "audio/w124.mp3"
+  },
+  {
+   "en": "train",
+   "zh": "火车",
+   "cat": "交通",
+   "say": "train",
+   "img": "img/125-train.jpg",
+   "id": 125,
+   "audio": "audio/w125.mp3"
+  },
+  {
+   "en": "taxi",
+   "zh": "出租车",
+   "cat": "交通",
+   "say": "taxi",
+   "img": "img/126-taxi.jpg",
+   "id": 126,
+   "audio": "audio/w126.mp3"
+  },
+  {
+   "en": "sour",
+   "zh": "酸的",
+   "cat": "感受",
+   "say": "sour",
+   "img": "img/127-sour.jpg",
+   "id": 127,
+   "audio": "audio/w127.mp3"
+  },
+  {
+   "en": "sweet",
+   "zh": "甜的",
+   "cat": "感受",
+   "say": "sweet",
+   "img": "img/128-sweet.jpg",
+   "id": 128,
+   "audio": "audio/w128.mp3"
+  },
+  {
+   "en": "salty",
+   "zh": "咸的",
+   "cat": "感受",
+   "say": "salty",
+   "img": "img/129-salty.jpg",
+   "id": 129,
+   "audio": "audio/w129.mp3"
+  },
+  {
+   "en": "spicy",
+   "zh": "辣的",
+   "cat": "感受",
+   "say": "spicy",
+   "img": "img/130-spicy.jpg",
+   "id": 130,
+   "audio": "audio/w130.mp3"
+  },
+  {
+   "en": "bitter",
+   "zh": "苦的",
+   "cat": "感受",
+   "say": "bitter",
+   "img": "img/131-bitter.jpg",
+   "id": 131,
+   "audio": "audio/w131.mp3"
+  },
+  {
+   "en": "salt",
+   "zh": "盐",
+   "cat": "食物",
+   "say": "salt",
+   "img": "img/132-salt.jpg",
+   "id": 132,
+   "audio": "audio/w132.mp3"
+  },
+  {
+   "en": "coffee",
+   "zh": "咖啡",
+   "cat": "食物",
+   "say": "coffee",
+   "img": "img/133-coffee.jpg",
+   "id": 133,
+   "audio": "audio/w133.mp3"
+  },
+  {
+   "en": "red pepper",
+   "zh": "红辣椒",
+   "cat": "食物",
+   "say": "red pepper",
+   "img": "img/134-red-pepper.jpg",
+   "id": 134,
+   "audio": "audio/w134.mp3"
+  }
+ ],
+ "audio_covered": 134,
+ "audio_total": 134
+}
