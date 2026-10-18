@@ -120,129 +120,14 @@ function warmUp() {
 ["pointerdown", "touchstart", "keydown"].forEach(function (ev) {
   document.addEventListener(ev, warmUp, { once: true });
 });
-/* Master audio needs both fetch and (on Chrome) AudioContext init to come
-   from a user gesture. We piggy-back on the same first-gesture hooks. */
-["pointerdown", "touchstart", "keydown"].forEach(function (ev) {
-  document.addEventListener(ev, kickMaster, { once: true, capture: true });
-});
-
-/* ---- one-pass master audio (一条过 + 自动切分) ----
-   We replaced 134 individual TTS calls with a single synthesize_speech call:
-   "word1, word2, word3, ..." (comma separators give the cleanest prosody
-   split on Chrome 155 decodeAudioData + a 25ms-RMS / 300ms-silence detector).
-   The decoded AudioBuffer is held once; each word plays as a sub-slice via
-   AudioBufferSourceNode.start(when, offset, duration). Boundaries cache in
-   localStorage so subsequent loads skip the RMS scan. Per-word mp3s are
-   still shipped as a graceful fallback in case decode or detection fails. */
-var clip = null;            // shared Audio element used only for the per-word fallback
+/* ---- 词典读音（每词一个 mp3）----
+   audio/wNNN.mp3 现在是真实词典发音（牛津学习者词典美音真人录音，
+   牛津没有的短语词条用有道词典读音兜底，来源清单见 audio-sources.json）。
+   播放直接走 HTMLAudioElement（慢速 playbackRate=0.6，preservesPitch 不变调），
+   播不出时回退浏览器 TTS（speakWord 内处理）。 */
+var clip = null;            // shared Audio element for per-word playback
 var clipBroken = {};        // per-word flag so we only fall back once
-var HAVE_CLIPS = true;      // master is always there; per-word covers the rare edge case
-
-var masterBuf = null;       // ArrayBuffer for all-words.mp3
-var masterAudio = null;     // decoded AudioBuffer (heavy - 30 MB float32 PCM)
-var masterSegs = null;      // [[startSec, endSec], ...] length = WORDS.length
-var masterLoading = null;   // promise, de-duped
-var masterErr = null;       // last load failure
-var SEG_CACHE_KEY = "wk_master_segs_v3";
-var SEG_PARAMS = { win: 25, hop: 10, minSil: 300, Tfrac: 0.18 };
-
-function detectSegmentsMaster(audioBuf, P) {
-  var sr = audioBuf.sampleRate;
-  var ch0 = audioBuf.getChannelData(0);
-  var WIN = Math.round(P.win / 1000 * sr);
-  var HOP = Math.round(P.hop / 1000 * sr);
-  var nFrames = Math.max(0, Math.floor((ch0.length - WIN) / HOP) + 1);
-  var rms = new Float32Array(nFrames);
-  for (var i = 0; i < nFrames; i++) {
-    var s = 0;
-    var off = i * HOP;
-    for (var j = 0; j < WIN; j++) { var v = ch0[off + j]; s += v * v; }
-    rms[i] = Math.sqrt(s / WIN);
-  }
-  var sorted = Array.prototype.slice.call(rms).sort(function (a, b) { return a - b; });
-  var quiet = sorted[Math.max(0, Math.floor(sorted.length * 0.05))];
-  var loud  = sorted[Math.max(0, Math.floor(sorted.length * 0.95))];
-  var THRESH = quiet + (loud - quiet) * P.Tfrac;
-  var silent = new Uint8Array(nFrames);
-  for (var i2 = 0; i2 < nFrames; i2++) silent[i2] = rms[i2] < THRESH ? 1 : 0;
-  var minSilFrames = Math.round(P.minSil / 1000 / (HOP / sr));
-  var soundRuns = [];
-  var i3 = 0;
-  while (i3 < nFrames) {
-    if (!silent[i3]) {
-      var j2 = i3;
-      while (j2 < nFrames && !silent[j2]) j2++;
-      soundRuns.push([i3, j2]);
-      i3 = j2;
-    } else i3++;
-  }
-  var merged = [];
-  var frameToSec = function (frames) { return frames * HOP / sr; };
-  for (var k = 0; k < soundRuns.length; k++) {
-    var a = soundRuns[k][0], b = soundRuns[k][1];
-    var s = frameToSec(a), e = frameToSec(b);
-    if (merged.length && (s - merged[merged.length - 1][1]) * 1000 < P.minSil) {
-      merged[merged.length - 1][1] = e;
-    } else merged.push([s, e]);
-  }
-  return merged;
-}
-
-function getAudioCtx() {
-  if (!window.__wk_audioCtx) {
-    try {
-      window.__wk_audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    } catch (e) { return null; }
-  }
-  return window.__wk_audioCtx;
-}
-
-function loadMaster() {
-  if (masterAudio) return Promise.resolve(masterAudio);
-  if (masterLoading) return masterLoading;
-  masterLoading = (async function () {
-    if (!masterBuf) {
-      var r = await fetch("./audio/all-words.mp3");
-      if (!r.ok) throw new Error("master http " + r.status);
-      masterBuf = await r.arrayBuffer();
-    }
-    var ctx = getAudioCtx();
-    if (!ctx) throw new Error("no AudioContext");
-    // slice(0) so the original ArrayBuffer can be GC'd later if we ever reload
-    masterAudio = await ctx.decodeAudioData(masterBuf.slice(0));
-    var cached = null;
-    try { cached = JSON.parse(localStorage.getItem(SEG_CACHE_KEY) || "null"); } catch (e) {}
-    if (cached && cached.length === WORDS.length &&
-        cached.every(function (s) { return s && s.length === 2 &&
-          typeof s[0] === "number" && typeof s[1] === "number"; })) {
-      masterSegs = cached;
-    } else {
-      masterSegs = detectSegmentsMaster(masterAudio, SEG_PARAMS);
-      try { localStorage.setItem(SEG_CACHE_KEY, JSON.stringify(masterSegs)); } catch (e) {}
-    }
-    return masterAudio;
-  })().catch(function (e) {
-    masterErr = e; masterLoading = null; throw e;
-  });
-  return masterLoading;
-}
-
-function playSlice(idx, slow) {
-  if (!masterAudio || !masterSegs) return false;
-  var seg = masterSegs[idx];
-  if (!seg) return false;
-  var ctx = getAudioCtx();
-  if (!ctx) return false;
-  if (ctx.state === "suspended") { try { ctx.resume(); } catch (e) {} }
-  var src = ctx.createBufferSource();
-  src.buffer = masterAudio;
-  src.playbackRate.value = slow ? 0.6 : 1.0;
-  src.connect(ctx.destination);
-  // 5ms lead-in avoids chopping the very first sample on replay
-  var startAt = ctx.currentTime + 0.005;
-  src.start(startAt, seg[0], seg[1] - seg[0]);
-  return true;
-}
+var HAVE_CLIPS = true;      // 每词词典音频已全量收录
 
 function playAudioElement(w, slow) {
   if (!w || !w.audio || clipBroken[w.en]) return false;
@@ -268,26 +153,8 @@ function playAudioElement(w, slow) {
 function playClip(w, slow) {
   if (!w) return false;
   var useSlow = !!(slow || S.slow);
-  var idx = (w.id != null) ? (w.id - 1) : WORDS.indexOf(w);
-  // Primary: master one-pass audio
-  if (masterAudio && masterSegs && idx >= 0 && masterSegs[idx]) {
-    return playSlice(idx, useSlow);
-  }
-  // Fallback: per-word mp3
-  if (playAudioElement(w, useSlow)) return true;
-  // No master yet; kick off background load so subsequent clicks use it
-  if (!masterLoading && !masterErr && !masterAudio) {
-    loadMaster().then(function () {}, function (e) { console.warn("master load failed", e); });
-  }
-  return false;
-}
-
-// Eager init on first user gesture (audio + fetch need one)
-var masterInitKicked = false;
-function kickMaster() {
-  if (masterInitKicked) return;
-  masterInitKicked = true;
-  loadMaster().then(function () {}, function (e) { console.warn("master load failed", e); });
+  // 词典读音：每词一个 mp3，直接播放
+  return playAudioElement(w, useSlow);
 }
 
 /* Two traps that both end with a word cut in half:
@@ -663,6 +530,7 @@ function start(mode) {
 function nextQ() {
   if (Q.i >= ROUND) return finish();
   cancelAutoSpeak();
+  clearTimeout(Q.autoT);
   var pool = Q.pool;
   var w = pool[Q.i % pool.length];
   // 干扰项优先同主题，更有区分度
@@ -690,7 +558,8 @@ function nextQ() {
     b.className = "big-speak"; b.textContent = "🔊"; b.id = "bigSpeak";
     b.addEventListener("click", function () { speakWord(Q.cur); });
     p.appendChild(b); p.appendChild(sub);
-    if (S.auto) speakPending(Q.cur);
+    /* 自动出题：音频就是题面，进题必播（点喇叭可重听） */
+    speakPending(Q.cur);
   } else if (Q.mode === "pic2word") {
     var im = document.createElement("img"); im.src = w.img; im.alt = "";
     p.appendChild(im); sub.textContent = "这张图是哪个单词？";
@@ -761,6 +630,8 @@ function answer(o, node) {
   } else {
     Q.streak = 0;
     Q.wrongs.push(Q.cur.en);
+    /* 听音选图答错：把正确读音再放一遍，听完自动进下一题 */
+    if (Q.mode === "audio2pic") speakPending(Q.cur);
   }
   $("#hudScore").textContent = "⭐ " + Q.score;
   $("#hudStreak").textContent = "🔥 " + Q.streak;
@@ -776,12 +647,22 @@ function showVerdict(right, timeout) {
              : "正确答案是 " + esc(Q.cur.en) + (S.zh ? "<small>" + esc(Q.cur.zh) + "</small>" : ""));
   $("#vNext").textContent = (Q.i >= ROUND) ? "看成绩单" : "继续";
   v.classList.add("show");
+  /* 听音选图：自动出题——答完自动进下一题（答错/超时多停留，留时间看正确答案） */
+  clearTimeout(Q.autoT);
+  if (Q.mode === "audio2pic") {
+    Q.autoT = setTimeout(function () {
+      $("#verdict").classList.remove("show");
+      nextQ();
+    }, right === true ? 1400 : 2500);
+  }
 }
 $("#vNext").addEventListener("click", function () {
+  clearTimeout(Q.autoT);
   $("#verdict").classList.remove("show");
   nextQ();
 });
 $("#vQuit").addEventListener("click", function () {
+  clearTimeout(Q.autoT);
   clearInterval(Q.timer);
   $("#verdict").classList.remove("show");
   show("home");
@@ -797,6 +678,7 @@ function esc(s) {
 function finish() {
   clearInterval(Q.timer);
   cancelAutoSpeak();
+  clearTimeout(Q.autoT);
   var used = LIMIT - Q.left;
   var rate = Q.i ? Math.round(Q.right / Q.i * 100) : 0;
   $("#rScore").textContent = Q.score;
@@ -887,9 +769,9 @@ function renderVoices() {
   if (!note) return;
   var withClip = WORDS.filter(function (w) { return !!w.audio; }).length;
   if (withClip === WORDS.length) {
-    note.innerHTML = "<b>" + WORDS.length + " 个词全部内置录音</b>：一条过的预生成（≈156 s），" +
-      "首页解码后会自动切段播放；个别切不准的词会用回每词 mp3。" +
-      "所有设备发音完全一致，断网也能用。";
+    note.innerHTML = "<b>" + WORDS.length + " 个词全部收录词典发音</b>：牛津学习者词典美音真人录音为主，" +
+      "牛津没有的短语词条用有道词典发音兜底（逐词清单见 audio-sources.json）。" +
+      "点哪个播哪个，发音与词典一致，断网也能用。";
   } else if (withClip) {
     note.innerHTML = "<b>" + withClip + "/" + WORDS.length + " 个词内置录音</b>；" +
       "其余 " + (WORDS.length - withClip) + " 个词会临时调用浏览器发音。";
@@ -1142,8 +1024,6 @@ function finishExam() {
   $("#examWrongN").textContent = total - right;
   $("#examTimeN").textContent = usedSec;
   show("exam-result");
-  // 主动预热下一次 master 解码（后台不阻塞 UI）
-  try { loadMaster(); } catch (e) {}
 }
 
 function renderExamReview() {
@@ -1210,18 +1090,8 @@ window.__wk = {
   ready: function () { return voicesReady; },
   haveClips: function () { return HAVE_CLIPS; },
   playClip: function (en) { return playClip(BY_EN[en]); },
-  // master audio
-  masterLoaded: function () { return !!masterAudio && !!masterSegs; },
-  masterSegs: function () { return masterSegs; },
-  loadMaster: loadMaster,
-  playSlice: function (id) { return playSlice((id||1) - 1, false); },
-  masterInfo: function () {
-    return {
-      loaded: !!masterAudio, segs: masterSegs ? masterSegs.length : 0,
-      durSec: masterAudio ? masterAudio.duration : 0,
-      sr: masterAudio ? masterAudio.sampleRate : 0,
-      err: masterErr ? String(masterErr.message || masterErr) : null,
-    };
+  clipInfo: function () {
+    return { perWordClips: true, brokenCount: Object.keys(clipBroken).length };
   },
   examState: function () {
     return {

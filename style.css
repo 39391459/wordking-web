@@ -233,6 +233,36 @@ button{font-family:inherit;color:inherit;border:0;background:none;cursor:pointer
   .prompt img{max-height:170px}
   .opt-card{min-height:96px}
   .opt-card img{height:76px}
+  .big-speak{width:70px;height:70px;font-size:33px}
+}
+
+/* ---------- 手机适配 ---------- */
+/* 刘海屏 / 手势条安全区（viewport-fit=cover 已在 meta 里开启） */
+#app{padding:calc(10px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-left))
+     calc(24px + env(safe-area-inset-bottom)) calc(14px + env(safe-area-inset-right))}
+.verdict .v-in{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+/* 触屏：消灭双击缩放延迟 + 防连点误选中 */
+@media (pointer:coarse){
+  button,.opt-card,.wcell,.cat,.fc-face{-webkit-user-select:none;user-select:none;touch-action:manipulation}
+  body{overscroll-behavior-y:contain}
+}
+/* 小屏手机（≤360px：iPhone SE / 老安卓）压缩尺寸防溢出 */
+@media (max-width:360px){
+  .home-head h1{font-size:28px}
+  .prompt .q-en{font-size:31px}
+  .prompt img{max-width:200px;max-height:190px}
+  .opt-card{min-height:102px;border-radius:18px}
+  .opt-card img{height:80px}
+  .opt-card .w{font-size:19px}
+  .opt-card .z{font-size:12px}
+  .big-speak{width:70px;height:70px;font-size:33px}
+  .chip{font-size:12.5px;padding:8px 4px}
+  .top-mode{padding:13px 14px}
+  .top-mode .ic{font-size:26px}
+  .top-mode .nm{font-size:17px}
+  .flashcard{aspect-ratio:3/4}
+  .fc-en{font-size:28px}
+  .fc-zh{font-size:18px}
 }
 
 /* ---------- top-mode 双按钮（首页：练习 / 考试） ---------- */

@@ -1,0 +1,673 @@
+{
+ "1": {
+  "word": "t-shirt",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/t_s/t_shi/t_shirt_1_us_1.mp3"
+ },
+ "2": {
+  "word": "dress",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/d/dre/dress/dress__us_1.mp3"
+ },
+ "3": {
+  "word": "cap",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/cap/cap__/cap__us_3.mp3"
+ },
+ "4": {
+  "word": "shorts",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sho/short/shorts__us_1.mp3"
+ },
+ "5": {
+  "word": "apple",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/a/app/apple/apple__us_1.mp3"
+ },
+ "6": {
+  "word": "pear",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pea/pear_/pear__us_1.mp3"
+ },
+ "7": {
+  "word": "banana",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/ban/banan/banana__us_2.mp3"
+ },
+ "8": {
+  "word": "honey",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hon/honey/honey__us_1.mp3"
+ },
+ "9": {
+  "word": "rabbit",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/r/rab/rabbi/rabbit__us_1.mp3"
+ },
+ "10": {
+  "word": "cat",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/cat/cat__/cat__us_1.mp3"
+ },
+ "11": {
+  "word": "monkey",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/mon/monke/monkey__us_1.mp3"
+ },
+ "12": {
+  "word": "pig",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pig/pig__/pig__us_1.mp3"
+ },
+ "13": {
+  "word": "tiger",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tig/tiger/tiger__us_1.mp3"
+ },
+ "14": {
+  "word": "papaya",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pap/papay/papaya__us_1.mp3"
+ },
+ "15": {
+  "word": "eyes",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=eyes&type=2"
+ },
+ "16": {
+  "word": "ears",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=ears&type=2"
+ },
+ "17": {
+  "word": "hop",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hop/hop__/hop__us_1.mp3"
+ },
+ "18": {
+  "word": "tiptoe",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tip/tipto/tiptoe__us_1.mp3"
+ },
+ "19": {
+  "word": "stop",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sto/stop_/stop__us_1.mp3"
+ },
+ "20": {
+  "word": "jump",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/j/jum/jump_/jump__us_1.mp3"
+ },
+ "21": {
+  "word": "yogurt",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/y/yog/yogur/yogurt__us_1.mp3"
+ },
+ "22": {
+  "word": "milk",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/mil/milk_/milk__us_1.mp3"
+ },
+ "23": {
+  "word": "juice",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/j/jui/juice/juice__us_1.mp3"
+ },
+ "24": {
+  "word": "water",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/w/wat/water/water__us_1_rr.mp3"
+ },
+ "25": {
+  "word": "bed",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bed/bed__/bed__us_2.mp3"
+ },
+ "26": {
+  "word": "moon",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/moo/moon_/moon__us_1.mp3"
+ },
+ "27": {
+  "word": "star",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sta/star_/star__us_1.mp3"
+ },
+ "28": {
+  "word": "mommy",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/mom/mommy/mommy__us_1.mp3"
+ },
+ "29": {
+  "word": "daddy",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/d/dad/daddy/daddy__us_1.mp3"
+ },
+ "30": {
+  "word": "hippo",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hip/hippo/hippo__us_1.mp3"
+ },
+ "31": {
+  "word": "lion",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/l/lio/lion_/lion__us_2.mp3"
+ },
+ "32": {
+  "word": "elephant",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/e/ele/eleph/elephant__us_1.mp3"
+ },
+ "33": {
+  "word": "wolf",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/w/wol/wolf_/wolf__us_1.mp3"
+ },
+ "34": {
+  "word": "turtle",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tur/turtl/turtle__us_2.mp3"
+ },
+ "35": {
+  "word": "red",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/r/red/red__/red__us_1.mp3"
+ },
+ "36": {
+  "word": "yellow",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/y/yel/yello/yellow__us_3.mp3"
+ },
+ "37": {
+  "word": "blue",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/blu/blue_/blue__us_1.mp3"
+ },
+ "38": {
+  "word": "green",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gre/green/green__us_1.mp3"
+ },
+ "39": {
+  "word": "balloon",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bal/ballo/balloon__us_1.mp3"
+ },
+ "40": {
+  "word": "blow",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/blo/blow_/blow__us_1.mp3"
+ },
+ "41": {
+  "word": "teeth",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tee/teeth/teeth__us_1.mp3"
+ },
+ "42": {
+  "word": "hands",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=hands&type=2"
+ },
+ "43": {
+  "word": "towel",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tow/towel/towel__us_1.mp3"
+ },
+ "44": {
+  "word": "tummy",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tum/tummy/tummy__us_1.mp3"
+ },
+ "45": {
+  "word": "boot",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/boo/boot_/boot__us_1.mp3"
+ },
+ "46": {
+  "word": "ball",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bal/ball_/ball__us_1.mp3"
+ },
+ "47": {
+  "word": "blocks",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=blocks&type=2"
+ },
+ "48": {
+  "word": "doll",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/d/dol/doll_/doll__us_1.mp3"
+ },
+ "49": {
+  "word": "kite",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/k/kit/kite_/kite__us_1.mp3"
+ },
+ "50": {
+  "word": "toy",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/toy/toy__/toy__us_1.mp3"
+ },
+ "51": {
+  "word": "car",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/car/car__/car__us_2.mp3"
+ },
+ "52": {
+  "word": "yo-yo",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/y/yo_/yo_yo/yo_yo_1_us_1.mp3"
+ },
+ "53": {
+  "word": "arms",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/a/arm/arms_/arms__us_1.mp3"
+ },
+ "54": {
+  "word": "head",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hea/head_/head__us_1.mp3"
+ },
+ "55": {
+  "word": "legs",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=legs&type=2"
+ },
+ "56": {
+  "word": "fingers",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=fingers&type=2"
+ },
+ "57": {
+  "word": "feet",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/f/fee/feet_/feet__us_1.mp3"
+ },
+ "58": {
+  "word": "bird",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bir/bird_/bird__us_1.mp3"
+ },
+ "59": {
+  "word": "eagle",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/e/eag/eagle/eagle__us_1.mp3"
+ },
+ "60": {
+  "word": "butterfly",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/but/butte/butterfly__us_1.mp3"
+ },
+ "61": {
+  "word": "owl",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/o/owl/owl__/owl__us_1.mp3"
+ },
+ "62": {
+  "word": "dragonfly",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/d/dra/drago/dragonfly__us_1.mp3"
+ },
+ "63": {
+  "word": "chick",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/chi/chick/chick__us_1.mp3"
+ },
+ "64": {
+  "word": "grandpa",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gra/grand/grandpa__us_1_rr.mp3"
+ },
+ "65": {
+  "word": "grandma",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gra/grand/grandma__us_1_rr.mp3"
+ },
+ "66": {
+  "word": "uncle",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/u/unc/uncle/uncle__us_1.mp3"
+ },
+ "67": {
+  "word": "aunt",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/a/aun/aunt_/aunt__us_1_rr.mp3"
+ },
+ "68": {
+  "word": "brother",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bro/broth/brother__us_2.mp3"
+ },
+ "69": {
+  "word": "sister",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sis/siste/sister__us_1.mp3"
+ },
+ "70": {
+  "word": "cookies",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=cookies&type=2"
+ },
+ "71": {
+  "word": "egg",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/e/egg/egg__/egg__us_1.mp3"
+ },
+ "72": {
+  "word": "fish",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/f/fis/fish_/fish__us_1.mp3"
+ },
+ "73": {
+  "word": "meat",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/mea/meat_/meat__us_1.mp3"
+ },
+ "74": {
+  "word": "noodles",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=noodles&type=2"
+ },
+ "75": {
+  "word": "six",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/six/six__/six__us_1.mp3"
+ },
+ "76": {
+  "word": "seven",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sev/seven/seven__us_1.mp3"
+ },
+ "77": {
+  "word": "eight",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/e/eig/eight/eight__us_1.mp3"
+ },
+ "78": {
+  "word": "door",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/d/doo/door_/door__us_1.mp3"
+ },
+ "79": {
+  "word": "chair",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/cha/chair/chair__us_1.mp3"
+ },
+ "80": {
+  "word": "table",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tab/table/table__us_1.mp3"
+ },
+ "81": {
+  "word": "floor",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/f/flo/floor/floor__us_1.mp3"
+ },
+ "82": {
+  "word": "sky",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sky/sky__/sky__us_1.mp3"
+ },
+ "83": {
+  "word": "sun",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sun/sun__/sun__us_1.mp3"
+ },
+ "84": {
+  "word": "tree",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tre/tree_/tree__us_1.mp3"
+ },
+ "85": {
+  "word": "grass",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/g/gra/grass/grass__us_1.mp3"
+ },
+ "86": {
+  "word": "chopsticks",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=chopsticks&type=2"
+ },
+ "87": {
+  "word": "fork",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/f/for/fork_/fork__us_1.mp3"
+ },
+ "88": {
+  "word": "knife",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/k/kni/knife/knife__us_1.mp3"
+ },
+ "89": {
+  "word": "plate",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pla/plate/plate__us_1.mp3"
+ },
+ "90": {
+  "word": "tired",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tir/tired/tired__us_1.mp3"
+ },
+ "91": {
+  "word": "angry",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/a/ang/angry/angry__us_1.mp3"
+ },
+ "92": {
+  "word": "scared",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sca/scare/scared__us_2.mp3"
+ },
+ "93": {
+  "word": "hungry",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hun/hungr/hungry__us_2.mp3"
+ },
+ "94": {
+  "word": "full",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/f/ful/full_/full__us_1.mp3"
+ },
+ "95": {
+  "word": "grapes",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=grapes&type=2"
+ },
+ "96": {
+  "word": "kiwi",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/k/kiw/kiwi_/kiwi__us_1.mp3"
+ },
+ "97": {
+  "word": "peach",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pea/peach/peach__us_1.mp3"
+ },
+ "98": {
+  "word": "cherry",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/che/cherr/cherry__us_1.mp3"
+ },
+ "99": {
+  "word": "pineapple",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pin/pinea/pineapple__us_1.mp3"
+ },
+ "100": {
+  "word": "lemon",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/l/lem/lemon/lemon__us_2.mp3"
+ },
+ "101": {
+  "word": "watermelon",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/w/wat/water/watermelon__us_3_rr.mp3"
+ },
+ "102": {
+  "word": "corn",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/cor/corn_/corn__us_1.mp3"
+ },
+ "103": {
+  "word": "mango",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/man/mango/mango__us_1.mp3"
+ },
+ "104": {
+  "word": "black",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bla/black/black__us_1.mp3"
+ },
+ "105": {
+  "word": "white",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/w/whi/white/white__us_1.mp3"
+ },
+ "106": {
+  "word": "orange",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/o/ora/orang/orange__us_1_rr.mp3"
+ },
+ "107": {
+  "word": "birthday",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bir/birth/birthday__us_1.mp3"
+ },
+ "108": {
+  "word": "hat",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/h/hat/hat__/hat__us_1.mp3"
+ },
+ "109": {
+  "word": "candle",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/can/candl/candle__us_1.mp3"
+ },
+ "110": {
+  "word": "bow",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=bow&type=2"
+ },
+ "111": {
+  "word": "fast/slow",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=fast%20and%20slow&type=2",
+  "note": "fast slow 无词典音频，用 fast and slow"
+ },
+ "112": {
+  "word": "play hopscotch",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=play%20hopscotch&type=2"
+ },
+ "113": {
+  "word": "play ping-pong",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=play%20ping-pong&type=2"
+ },
+ "114": {
+  "word": "play soccer",
+  "source": "youdao",
+  "url": "https://dict.youdao.com/dictvoice?audio=play%20soccer&type=2"
+ },
+ "115": {
+  "word": "panda",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pan/panda/panda__us_1.mp3"
+ },
+ "116": {
+  "word": "bear",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bea/bear_/bear__us_1.mp3"
+ },
+ "117": {
+  "word": "peacock",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pea/peaco/peacock__us_1.mp3"
+ },
+ "118": {
+  "word": "squirrel",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/squ/squir/squirrel__us_1.mp3"
+ },
+ "119": {
+  "word": "snake",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sna/snake/snake__us_1.mp3"
+ },
+ "120": {
+  "word": "bicycle",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bic/bicyc/bicycle__us_1.mp3"
+ },
+ "121": {
+  "word": "boat",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/boa/boat_/boat__us_1.mp3"
+ },
+ "122": {
+  "word": "bus",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bus/bus__/bus__us_1.mp3"
+ },
+ "123": {
+  "word": "motorcycle",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/m/mot/motor/motorcycle__us_1.mp3"
+ },
+ "124": {
+  "word": "plane",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/p/pla/plane/plane__us_1.mp3"
+ },
+ "125": {
+  "word": "train",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tra/train/train__us_1.mp3"
+ },
+ "126": {
+  "word": "taxi",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/t/tax/taxi_/taxi__us_2.mp3"
+ },
+ "127": {
+  "word": "sour",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sou/sour_/sour__us_1.mp3"
+ },
+ "128": {
+  "word": "sweet",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/swe/sweet/sweet__us_1.mp3"
+ },
+ "129": {
+  "word": "salty",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sal/salty/salty__us_1.mp3"
+ },
+ "130": {
+  "word": "spicy",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/spi/spicy/spicy__us_1.mp3"
+ },
+ "131": {
+  "word": "bitter",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/b/bit/bitte/bitter__us_3.mp3"
+ },
+ "132": {
+  "word": "salt",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/s/sal/salt_/salt__us_1.mp3"
+ },
+ "133": {
+  "word": "coffee",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/c/cof/coffe/coffee__us_1_rr.mp3"
+ },
+ "134": {
+  "word": "red pepper",
+  "source": "oxford_us",
+  "url": "https://www.oxfordlearnersdictionaries.com/media/english/us_pron/r/red/red_p/red_pepper_1_us_1.mp3"
+ }
+}

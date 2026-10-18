@@ -11,14 +11,13 @@
 
 ## 发音
 
-**一条过的预生成录音**（英文女声 `English_Graceful_Lady`，speed 0.9）：
+**真实词典读音**（每词一个 mp3，收录在 `audio/w001.mp3 ... w134.mp3`）：
 
-- 一次 TTS 调用把 134 词拼成一条 2.5 MB / 157 秒的长 mp3，用 **逗号** 做词间分隔
-- 浏览器首屏 `decodeAudioData` 后跑静音切分（25ms RMS / 300ms 静音阈值 / 自动阈值）拿到 134 个时间戳，切分结果本地缓存到 `localStorage`（后续打开直接用）
-- 点哪个词就用 `AudioBufferSourceNode.start(when, offset, duration)` 切播对应的段，不重复拉文件
-- 所有设备发音完全一致，不会被系统音色带偏；**断网也能用**
-- 「慢速发音」开关用 `playbackRate=0.6` 实现，放慢**不变调**
-- 万一浏览器解码失败或某词边界没切到，会自动回退到该词自己的小 mp3（`audio/wNNN.mp3`，作为兜底音轨一并打包）
+- 优先采用 **牛津学习者词典（Oxford Learner's Dictionaries）美音真人录音**
+- 牛津没有收录的短语词条（如 play soccer / play hopscotch / fast slow）用 **有道词典发音** 兜底
+- 每个词独立文件，点哪个播哪个，不依赖切分算法，发音与词典完全一致
+- 「慢速发音」开关用 `playbackRate=0.6` + `preservesPitch` 实现，放慢**不变调**
+- 读音来源逐词记录在 `audio-sources.json`（随项目归档），浏览器播不出 mp3 时自动回退系统 TTS
 
 ## 两种模式，五种玩法
 
@@ -73,23 +72,21 @@ data.js      134 个词条数据（内联，双击打开也能用）
 words.json   同一份数据的 JSON 版，方便二次开发
 img/         134 张单词图，从题库 PDF 里逐张抠出来的
 audio/
-  all-words.mp3   一条过、157 秒的长录音（主路径，发声解码 + 自动切分）
-  w001.mp3 ... w134.mp3   每词独立的录音（兜底路径，主路径失败时自动回退）
+  w001.mp3 ... w134.mp3   每词的词典发音（牛津美音为主，有道兜底）
 README.md    本文件
+audio-sources.json        逐词读音来源清单（与 audio/ 同级归档）
 ```
 
 图片取自题库 PDF 原图，200 DPI 渲染后裁切、压到 440px JPEG，共约 1.7 MB。
-主音频 `audio/all-words.mp3` 2.5 MB，由 Matrix TTS（音色 `English_Graceful_Lady`，speed 0.9）一条过生成。
-兜底 `audio/wNNN.mp3` 134 段共约 2.5 MB，同音色、同样参数、逐词合成。
-整个文件夹约 6.5 MB。
+发音音频来自牛津学习者词典（oxfordlearnersdictionaries.com）与有道词典（dict.youdao.com），
+仅供班级内部教学练习使用。
 
 ## 重新生成（需要时）
 
 ```bash
 python tools/extract_cards.py    # 从 PDF 重新抠图 -> _cards_raw.json
 python tools/build_words.py      # 生成 words.json / data.js / img/
-python tools/gen_audio.py        # 一条过生成 audio/all-words.mp3（首选）
-python tools/gen_audio.py --per-word   # 逐词生成 audio/wNNN.mp3（兜底）
+python audio-work/fetch_dict_audio.py   # 重新收录词典发音（牛津优先，有道兜底）
 ```
 
 ## 源题库的两处问题（已按现状处理，未擅自改词表）
