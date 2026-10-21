@@ -176,6 +176,26 @@ button{font-family:inherit;color:inherit;border:0;background:none;cursor:pointer
 @keyframes pop{50%{transform:scale(1.07)}}
 @keyframes shake{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 
+/* 10 选 1（听音选图 / 看词选图）：3 列紧凑网格，宽屏 5 列两行 */
+.opts-grid.ten{grid-template-columns:repeat(3,1fr);gap:8px}
+.opts-grid.ten .opt-card{min-height:84px;padding:8px;border-radius:16px;border-width:3px}
+.opts-grid.ten .opt-card img{height:64px}
+.opts-grid.ten .opt-card .w{font-size:15px}
+@media (min-width:430px){
+  .opts-grid.ten{grid-template-columns:repeat(5,1fr)}
+  .opts-grid.ten .opt-card{min-height:94px}
+  .opts-grid.ten .opt-card img{height:70px}
+}
+@media (max-width:360px){
+  .opts-grid.ten{gap:6px}
+  .opts-grid.ten .opt-card{min-height:72px;padding:6px}
+  .opts-grid.ten .opt-card img{height:53px}
+}
+/* 10 选 1 时压缩题面，避免整屏滚动 */
+.quiz-ten .prompt{min-height:96px;margin-bottom:8px}
+.quiz-ten .prompt img{max-height:150px}
+.quiz-ten .prompt .q-en{font-size:32px}
+
 .verdict{position:fixed;inset:0;background:rgba(58,42,28,.34);display:none;
          align-items:flex-end;justify-content:center;z-index:40;backdrop-filter:blur(2px)}
 .verdict.show{display:flex;animation:fade .18s}

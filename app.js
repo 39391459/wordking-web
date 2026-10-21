@@ -244,6 +244,31 @@ function shuffle(a) {
   return a;
 }
 function pick(arr, n) { return shuffle(arr.slice()).slice(0, n); }
+
+/* 构建选项：优先同主题干扰项，不够再从当前词池/全词表借。
+   同时按「单词」和「图片」去重 —— hat 与 birthday 共用同一张图（内容完全相同），
+   10 选 1 时若不去重会出现两张一模一样的图，孩子无法分辨。 */
+var IMG_TWIN = { "img/108-hat.jpg": "img/107-birthday.jpg" };  // 内容重复图 → 归一到同一张
+function imgKey(src) { return IMG_TWIN[src] || src; }
+function buildOpts(w, pool, need) {
+  var out = [w];
+  var seenEn = {}; seenEn[w.en] = 1;
+  var seenImg = {}; seenImg[imgKey(w.img)] = 1;
+  function take(list) {
+    var cand = shuffle(list.slice());
+    for (var i = 0; i < cand.length && out.length < need; i++) {
+      var o = cand[i];
+      var k = imgKey(o.img);
+      if (seenEn[o.en] || seenImg[k]) continue;
+      seenEn[o.en] = 1; seenImg[k] = 1;
+      out.push(o);
+    }
+  }
+  take(pool.filter(function (x) { return x.cat === w.cat; }));
+  take(pool);
+  take(WORDS);
+  return shuffle(out);
+}
 function toast(msg) {
   var t = $("#toast");
   t.textContent = msg; t.classList.add("show");
@@ -539,10 +564,9 @@ function nextQ() {
   if (clip) { try { clip.pause(); } catch (e) {} }
   var pool = Q.pool;
   var w = pool[Q.i % pool.length];
-  // 干扰项优先同主题，更有区分度
-  var same = pool.filter(function (x) { return x.cat === w.cat && x.en !== w.en; });
-  var opts = pick(same.length >= 3 ? same : pool.filter(function (x) { return x.en !== w.en; }), 3);
-  opts.push(w);
+  // 选图模式 10 选 1（听音选图/看词选图），选词模式 4 选 1
+  var needOpt = (Q.mode === "pic2word") ? 4 : 10;
+  var opts = buildOpts(w, pool, needOpt);
   opts = shuffle(opts);
 
   Q.cur = w; Q.opts = opts; Q.locked = false;
@@ -578,6 +602,9 @@ function nextQ() {
   }
 
   var grid = $("#quizOpts");
+  grid.classList.toggle("ten", opts.length > 4);
+  var quizScr = $("#scr-quiz");
+  if (quizScr) quizScr.classList.toggle("quiz-ten", opts.length > 4);
   grid.innerHTML = "";
   opts.forEach(function (o) {
     var c = document.createElement("button");
